@@ -32,7 +32,7 @@ public class VariablesDemo : MonoBehaviour
 
         //REMEMBER: gameObject refers to the game object this code is attached to, whereas GameObject, with a capital G, refers to other game objects
 
-        //I can declase variables within functions, but I cannot access them in other functions unless I explicitly feed them into another function
+        //I can declare variables within functions, but I cannot access them in other functions unless I explicitly feed them into another function
 
         int temp = 1; //only exists and useable in Start()
 
