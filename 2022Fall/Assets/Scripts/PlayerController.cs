@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AnimationDirection
+public enum AnimationDirection //think of enums as giving names to variables. You could use an int and just have 0 be up, 1 be right, and so on, but using enums gives us names for us coders to easily understand what is going on
 {
     Front,
     Right
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rigidBody;
     public Vector2 movement;
 
-    /*public KeyCode jumpKey;
+    public KeyCode jumpKey;
 
     public Animator playerAnimator;
     private string _currentState;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public string IDLE_RIGHT;
 
     #endregion
-    */
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        /*
+
         if (Input.GetKeyDown(jumpKey))
         {
             playerAnimator.SetBool("movingRight", true);
@@ -51,17 +51,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(jumpKey))
         {
             playerAnimator.SetBool("movingRight", false);
-        }*/
+        }
     }
 
     private void FixedUpdate()
     {
         rigidBody.MovePosition(rigidBody.position + movement * movementSpeed);
-        /*
-        
+
+
         if (_playerDirection == AnimationDirection.Front)
             ChangeAnimationState(IDLE_FRONT);
-        else if(_playerDirection == AnimationDirection.Right)
+        else if (_playerDirection == AnimationDirection.Right)
             ChangeAnimationState(IDLE_RIGHT);
 
         if (movement.x > 0) //right
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             ChangeAnimationState(IDLE_RIGHT);
             _playerDirection = AnimationDirection.Right;
         }
-        else if (movement.y < 0 ) // down
+        else if (movement.y < 0) // down
         {
             ChangeAnimationState(IDLE_FRONT);
             _playerDirection = AnimationDirection.Front;
@@ -83,9 +83,9 @@ public class PlayerController : MonoBehaviour
             return;
 
         playerAnimator.Play(newState);
-        
+
 
         _currentState = newState;
-    }*/
-    }
+    } 
+    
 }
