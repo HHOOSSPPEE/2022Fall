@@ -30,7 +30,6 @@ public class CameraController : MonoBehaviour
 
         Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref _velocity, smoothSpeed); //we use smoothdamp instead of lerp because our target is likely moving (lerp can get jittery) and it, over time, calculates a smooth movement from our current to our desired position
 
-
         //boundaries 
         transform.position = new Vector3(Mathf.Clamp(smoothedPosition.x, limitLeft, limitRight), Mathf.Clamp(smoothedPosition.y, limitBottom, limitTop), smoothedPosition.z); //we now adjust our calculation to make sure we don't move out of the boundaries we've set. IE, if our calculated smoothPosition is 11 on the x axis, but we have a rightLimit of 10, it will automatically bring 11 down to 10
     }
