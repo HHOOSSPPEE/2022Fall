@@ -8,6 +8,9 @@ public class ColTrigDemo : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private CameraScript _cc;
+    private MusicManager _mm;
+
+    public AudioClip triggerClip;
     
     // Start is called before the first frame update
     void Start()
@@ -15,9 +18,10 @@ public class ColTrigDemo : MonoBehaviour
         //get our sprite renderer and turn it off so we don't see our trigger
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        _spriteRenderer.enabled = false;
+        //_spriteRenderer.enabled = false;
 
         _cc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
+        _mm = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +36,7 @@ public class ColTrigDemo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            _mm.PlayMusic(triggerClip);
             Debug.Log("Hello");
         }
     }

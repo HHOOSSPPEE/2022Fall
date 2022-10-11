@@ -78,6 +78,7 @@ public class StoryManager : MonoBehaviour
         if (_storyindex >= 0)
         {
             mainText.SetText(story[_storyindex]);
+            
         }
         else
         {
