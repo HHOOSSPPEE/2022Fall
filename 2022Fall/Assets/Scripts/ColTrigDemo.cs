@@ -8,9 +8,9 @@ public class ColTrigDemo : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private CameraScript _cc;
-    private MusicManager _mm;
+    //private MusicManager _mm;
 
-    public AudioClip triggerClip;
+   // public AudioClip triggerClip;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class ColTrigDemo : MonoBehaviour
         //_spriteRenderer.enabled = false;
 
         _cc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
-        _mm = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>();
+       // _mm = GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,7 +36,7 @@ public class ColTrigDemo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            _mm.PlayMusic(triggerClip);
+           //_mm.PlayMusic(triggerClip);
             Debug.Log("Hello");
         }
     }
