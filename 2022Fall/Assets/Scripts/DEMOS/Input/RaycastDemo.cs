@@ -27,6 +27,7 @@ public class RaycastDemo : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(_bc.bounds.center, Vector2.down, _bc.bounds.extents.y + 0.1f, ground);
 
         _isGrounded = hit;
+        
 
         if(Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
         {
