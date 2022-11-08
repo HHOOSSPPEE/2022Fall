@@ -34,11 +34,25 @@ public class RaycastJump : MonoBehaviour
         _isGrounded = hit;
         Debug.Log(_isGrounded);
 
+
+
         if(Input.GetKeyDown(KeyCode.Space) && _isGrounded == true)
         {
             _rb.velocity = Vector2.up * jumpVelocity;
         }
 
         Debug.DrawRay(_bc.bounds.center, Vector2.down * (_bc.bounds.extents.y + 0.1f), debugColor, ground);
+
+        /*
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit))
+            print("Found an object - distance: " + hit.distance);
+
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, boxCollider.bounds.extents.y + 0.1f, ground))
+        {
+
+        }
+        */
     }
 }

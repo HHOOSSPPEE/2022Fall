@@ -87,5 +87,9 @@ public class PlayerController : MonoBehaviour
 
         _currentState = newState;
     } 
+
+    public void ContactAnimation() {
+
+    }
     
 }

@@ -2,26 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class EnemyManager : MonoBehaviour
 {
-    public Enemy enemy;
+    public Enemy enemyType;
 
-    private float _speed;
+    public string enemyName;
+    public int enemyHealth;
+
+    public Sprite enemySprite;
+
+    public void LoadInfo()
+    {
+        enemyName = enemyType.enemyName;
+    }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        AssignValues();
-    }
-
-    void AssignValues()
-    {
-        _speed = enemy.enemySpeed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

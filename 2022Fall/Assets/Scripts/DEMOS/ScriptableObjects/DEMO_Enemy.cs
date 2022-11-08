@@ -37,4 +37,25 @@ public class DEMO_Enemy : ScriptableObject
         Debug.Log("Enemy Name:" + enemyName);
         return enemyName;
     }
+
+    private void Awake()
+    {
+
+    } //when scriptable object is created
+
+    private void OnEnable()
+    {
+       
+    } 
+
+    private void OnDisable()
+    {
+        
+    }
+
+    private void OnDestroy()
+    {
+        
+    }
+
 }

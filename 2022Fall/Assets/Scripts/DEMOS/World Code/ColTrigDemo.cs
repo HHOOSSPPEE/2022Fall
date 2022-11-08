@@ -36,7 +36,9 @@ public class ColTrigDemo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-           //_mm.PlayMusic(triggerClip);
+            //_mm.PlayMusic(triggerClip);
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            player.ContactAnimation();
             Debug.Log("Hello");
         }
     }

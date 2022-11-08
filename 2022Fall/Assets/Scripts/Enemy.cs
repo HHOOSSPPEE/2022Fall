@@ -2,24 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum EnemyDamageTypes
+public enum EnemyTypes
 {
-    Sladhing,
-    Bludgeoning,
-    Piercing,
-    Magic
+    Melee,
+    Magic,
+    Archer
+
 }
-[CreateAssetMenu(fileName= "New Enemy", menuName = "New Enemy")]
+
+[CreateAssetMenu(fileName = "New Enemy", menuName = "Enemy 2")]
 public class Enemy : ScriptableObject
 {
     public string enemyName;
-    public string enemyDescription;
-
-    public Sprite enemyPortrait;
-
     public int enemyHealth;
-    public float enemySpeed;
+    public EnemyTypes enemyType;
 
-    public EnemyDamageTypes damage;
+    public Sprite enemySprite;
 }
