@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TriggerZone : MonoBehaviour
 {
+    //This script exists as a demo script. It does not work in the context of this project!!
+    /*
     public CameraManager cameraManager;
     public KeyCode cameraSwitchKey;
     private bool _isInZone;
@@ -40,6 +42,6 @@ public class TriggerZone : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
             _isInZone = false;
-    }
+    }*/
 
 }
