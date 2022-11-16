@@ -30,7 +30,9 @@ public class PlayerMovementDemo : MonoBehaviour
     private void FixedUpdate() //We use FixedUpdate for any movement/physics because we don't want those interactions to be frame dependant - slowing down and speeding up depending on our hardware
     {
         _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed); //MovePosition is a built-in method for rigidbody2D that takes in a Vector2 to move to, taking care of the movement for use rather than just teleporting to a new position
-        //it takes our starting position and adds how much to move in each direction depending on what keys we press. That amount to move is modified by our speed. Ie, if I wanted to move up, pressing W might say "hey, add 1 to the y axis" that'll then be modified down to .1f by our movement speed. 
+                                                                                  //it takes our starting position and adds how much to move in each direction depending on what keys we press. That amount to move is modified by our speed. Ie, if I wanted to move up, pressing W might say "hey, add 1 to the y axis" that'll then be modified down to .1f by our movement speed. 
+
+
         
     }
 }

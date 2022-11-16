@@ -12,6 +12,7 @@ public class PlayerAnimator : MonoBehaviour
     #region Animation States
     public string IDLE_FRONT;
 
+
     #endregion
 
     private void Start()
@@ -29,6 +30,11 @@ public class PlayerAnimator : MonoBehaviour
         _animator.Play(newState);
 
         _currentState = newState;
+    }
+
+    public void PlayJump()
+    {
+        _animator.Play(IDLE_FRONT);
     }
 
     public void TouchingWall()
